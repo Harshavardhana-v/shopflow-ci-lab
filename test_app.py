@@ -1,4 +1,7 @@
 from app import get_order_status
 
 def test_order_status():
-    assert 1==2
+    result = get_order_status()
+
+    assert result["service"] == "Shopflow order service"
+    assert result["status"]  == "running"
